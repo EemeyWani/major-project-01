@@ -99,12 +99,12 @@ app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 
-//yaha change kiya
+// yha sa
 app.get("/", (req, res) => {
   res.redirect("/listings");
 });
 
-// yaha taq
+// yha taq
 
 app.all("*", (req, res, next) => {
   next(new ExpressError(404, "Page Not Found!"));
